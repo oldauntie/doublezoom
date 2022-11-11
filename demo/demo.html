@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <title>DoubleZoom - Demo</title>
+
+
+    <!-- Fonts -->
+
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="doublezoom.css" type="text/css" />
+    <script src="doublezoom.js"></script>
+  </head>
+
+  <body>
+    <h3>DoubleZoom Demo</h3>
+    <p>1) Move the lens</p>
+    <p>2) First mouse click freezes the zoomed detail #1</p>
+    <p>3) Second mouse click freezes the zoomed detail #2</p>
+    <p>4) Third click go to ->  2) </p>
+    <div style="width: 600px;">
+      <div class="doublezoom-container">
+        <div class="doublezoom-image">
+          <div class="box">
+            <img id="myimage1" width="640" src="autumn-forest.jpeg" class="img-fluid" alt="..." />
+          </div>
+        </div>
+        <div class="doublezoom-landing">
+          <div class="doublezoom-landing-left"></div>
+          <div class="doublezoom-landing-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $("#myimage1").doublezoom();
+      // imageZoom("myimage", "myresult", "myresult2");
+    </script>
+  </body>
+</html>
